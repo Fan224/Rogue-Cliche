@@ -11,7 +11,7 @@ var  yy = 0; with (obj_parent_depth){
 	yy++;
 }
 
-//Checkea la grid en un orden descendente ya que va desde el valor màs bajo (ej:Y0) > al màs alto(ej:Y150))
+//Checkea la grid en un orden descendente ya que baja desde el valor màs bajo (ej:Y-0) > al màs alto(ej:Y-150))
 ds_grid_sort(grid,1,true);
 
 //Draw instances
@@ -20,7 +20,7 @@ yy = 0; repeat(ins_num){
 	 
 	//Sacar ID del Grid
 	inst = grid[# 0,yy];
-	//Hacer que el objeto se Dibuje asi mismo
+	//Hace que el objeto se Dibuje asi mismo
 	with (inst)
 	{
      event_perform(ev_draw,0);	

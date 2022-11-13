@@ -14,7 +14,7 @@ ter_x=0; ter_y=0;
 } 
 else 
 {
-var	ter_intensity = 0; //Intensidad del efecto (pixeles que mueve)
+var	ter_intensity = 8; //Intensidad del efecto (pixeles que mueve)
 ter_t +=1;
 ter_x = irandom_range(-ter_intensity,ter_intensity);
 ter_y = irandom_range(-ter_intensity,ter_intensity);

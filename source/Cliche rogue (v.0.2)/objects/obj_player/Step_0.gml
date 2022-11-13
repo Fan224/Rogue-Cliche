@@ -67,6 +67,7 @@ var _yy = y + lengthdir_y(20, dir);
 
 obj_gun_dir.act = 1;
 with instance_create_layer(_xx, _yy, layer, obj_bullet)
+
 {angle = other.dir;} //Bullet
 instance_create_layer(_xx, _yy,layer,obj_shooteffect); //Shoot particle
 
@@ -74,8 +75,9 @@ obj_camera.ter = 1;
 shoot=1;
 }
 
+#endregion
 
-//Recarga
+#region//Recarga
 
 //Hace que el tiempo de recarga no pueda bajar de una cierta cantidad, por balancè.
 global.reload = clamp(global.reload, 2.0 , 20);
@@ -84,7 +86,7 @@ global.reload = clamp(global.reload, 2.0 , 20);
 //Si disparaste se recarga el arma actual
 if shoot = 1
 {
- ts +=1;
+ts +=1;
 }
 
 
@@ -100,7 +102,6 @@ ts = 0;
 
 
 //Direccion del sprite
-
 if  (key_right) or (key_left) or (key_up) or (key_down)
 {
 if face==1 {sprite_index=(spr_player_move_left);}

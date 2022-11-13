@@ -1,3 +1,3 @@
 t+=1;
 
-if t > 3 {instance_destroy();}
+if t > 2 {instance_destroy();}

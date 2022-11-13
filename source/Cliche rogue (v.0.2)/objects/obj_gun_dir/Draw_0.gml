@@ -1,13 +1,13 @@
 /// @description  
 
+x=obj_player.x;
+y=obj_player.y;
 
-//Direccion
+//Direccion del disparo
 if instance_exists(obj_player)
-{
-dir=point_direction(obj_player.x,obj_player.y, mouse_x, mouse_y);
-}
+{dir = point_direction(obj_player.x,obj_player.y, mouse_x, mouse_y);}
 
-//Recoil / Tirada de arma
+//Recoil / Empuje de arma
 if act = 1 {
 recoil_amount=7;
 act=0;
@@ -22,7 +22,7 @@ gun_y-= lengthdir_y(recoil_amount,dir);
 
 
 
-//Gun-1 (Pistol)
+//Gun 1 (Pistol)
 
 //Derecha
 if dir < 90 or dir > 270
@@ -34,7 +34,7 @@ draw_sprite_ext(spr_gun,0, gun_x, gun_y,image_xscale,image_yscale,dir,image_blen
 
 
 //Izquierda
-if dir >= 90 and dir < 269
+if dir >= 90 and dir <= 270
 if instance_exists(obj_player)
 {
 obj_player.face=1;
