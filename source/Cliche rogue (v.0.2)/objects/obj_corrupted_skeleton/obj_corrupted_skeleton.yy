@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_corrupted_skeleton",
-  "spriteId": {
-    "name": "spr_berserker_skeleton",
-    "path": "sprites/spr_berserker_skeleton/spr_berserker_skeleton.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
