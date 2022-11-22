@@ -24,7 +24,6 @@ var _id1    = NestedArray1[i,4];
 
 //Recrea las instancias del cuarto original
 instance_create_layer(_x1,_y1,_layer1,_id1);
-instance_create_layer(0,0,"Entidades",obj_gun_dir);
 }
 
 for (var a = 0; a < array_length(NestedArray2); a++;)
@@ -37,7 +36,6 @@ var _id2    = NestedArray2[a,4];
 
 //Recrea las instancias del cuarto original
 instance_create_layer(_x2,_y2,_layer2,_id2);
-instance_create_layer(_x2,_y2,_layer2,obj_room_mark);
 }
 
 
@@ -51,7 +49,6 @@ var _id3    = NestedArray3[e,4];
 
 //Recrea las instancias del cuarto original
 instance_create_layer(_x3,_y3,_layer3,_id3);
-instance_create_layer(_x3,_y3,_layer3,obj_npc);
 }
 
 
