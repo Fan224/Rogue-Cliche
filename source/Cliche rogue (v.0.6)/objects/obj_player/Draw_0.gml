@@ -17,15 +17,7 @@ var _id   = asset_get_index(_obj);
 
 draw_set_color(c_blue);
 //Sombra
-time+=1;
-
-if time > 15
-for (var a=0; a < array_length (global.text); a++;)
-{
-draw_text(x+6,y-15,global.text[0,1]);
-draw_text(x+6,y-30,global.text[1,1]);
-time=0;
-}
+draw_sprite(spr_shadow,0,x,y+2)
 
 
 
