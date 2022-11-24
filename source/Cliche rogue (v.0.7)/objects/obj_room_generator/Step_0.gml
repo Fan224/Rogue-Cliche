@@ -33,9 +33,10 @@ gen = false;
 		if !position_meeting(genx,geny,obj_room_mark)
 		{
 		rooms_generated++;
-        with instance_create_depth(genx,geny,1,obj_room){if (other.rooms_generated <= other.limit-1){color=2;}else{color=1;}} 
+        with instance_create_depth(genx,geny,1,obj_room)
+		{if (other.rooms_generated <= other.limit-1){color=2;}else{color=1;}} 
+		
 		if !position_meeting(genx,geny+120,obj_door_down){instance_create_depth(genx,geny+120,-1,obj_door_down);} 
-		instance_create_depth(genx+random_range(-50,50),geny+random_range(-50,50),1,obj_heart);
 		}
 				instance_create_depth(genx,geny,1,obj_room_mark);
           tt=1;
