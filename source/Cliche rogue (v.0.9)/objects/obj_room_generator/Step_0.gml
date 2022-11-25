@@ -15,7 +15,8 @@ if (rooms_generated >= limit)
 gen = false;	
 }
 	
-
+doors1=0;
+doors2=0;
 		
 	if tt == 0
 	{
@@ -25,23 +26,29 @@ gen = false;
 		up    = false;
         left  = false;
         right = false;
+
 		
 		if !position_meeting(genx-17,geny-240,obj_door)
-		{with instance_create_depth(genx-17,geny-240,-1,obj_door){dir="up";}} //Puerta de salida
+		{with instance_create_depth(genx-17,geny-240,-1,obj_door){dir="up";doors1=id.object_index;}} //Puerta de salida
 		geny -= 480;
 		
 		if (!position_meeting(genx,geny,obj_room)) and (!place_meeting(genx,geny,obj_room))
 		if !position_meeting(genx,geny,obj_room_mark)
 		{
-		rooms_generated++;
-        with instance_create_depth(genx,geny,1,obj_room)
-		{if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}} 
+		 if !position_meeting(genx-17,geny+210,obj_door)
+		 {with instance_create_depth(genx-17,geny+210,-1,obj_door){dir="down";doors2=id.object_index;}} //puerta de entrada
 		
-		if !position_meeting(genx-17,geny+210,obj_door)
-		{with instance_create_depth(genx-17,geny+210,-1,obj_door){dir="down";}} //puerta de entrada
+		 rooms_generated++;
+         with instance_create_depth(genx,geny,1,obj_room)
+		 {if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}
+		 doors[1]=other.doors1;
+		 doors[2]=other.doors2;} 
 		}
-				instance_create_depth(genx,geny,1,obj_room_mark);
-          tt=1;
+		
+		instance_create_depth(genx,geny,1,obj_room_mark);
+        tt=1;
+		doors1=0;
+        doors2=0;
 		}
 		
 		//Down / abajo
@@ -52,22 +59,26 @@ gen = false;
         right = false;
 	
 		if !position_meeting(genx-17,geny+210,obj_door)
-		{with instance_create_depth(genx-17,geny+210,-1,obj_door){dir="down";}} 
+		{with instance_create_depth(genx-17,geny+210,-1,obj_door){dir="down";doors1=id.object_index;}} 
 		geny += 480;
 		
 		if (!position_meeting(genx,geny,obj_room))  and (!place_meeting(genx,geny,obj_room)) 
 		if !position_meeting(genx,geny,obj_room_mark)
 		{
-		rooms_generated++;
-	    with instance_create_depth(genx,geny,1,obj_room){if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}}  
-
+			
 		if !position_meeting(genx-17,geny-240,obj_door)
-		{
-		with instance_create_depth(genx-17,geny-240,-1,obj_door){dir="up";}} //puerta de entrada
-	    }
+		{with instance_create_depth(genx-17,geny-240,-1,obj_door){dir="up";doors2=id.object_index;}} //puerta de entrada
+		rooms_generated++;
+	    with instance_create_depth(genx,geny,1,obj_room)
+		{if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}
+		doors[1]=other.doors1;
+		doors[2]=other.doors2;}  
+		}
 		
 		instance_create_depth(genx,geny,1,obj_room_mark);
 		tt=1;
+		doors1=0;
+        doors2=0;
 		}
 		
 		//Right / Der
@@ -78,22 +89,26 @@ gen = false;
 		down  = false;
 		
 		if !position_meeting(genx+268,geny-17,obj_door)
-		{with instance_create_depth(genx+268,geny-17,-1,obj_door){dir="right";}} 
+		{with instance_create_depth(genx+268,geny-17,-1,obj_door){dir="right";doors1=id.object_index;}} 
 		genx += 608;
 		
 		if (!position_meeting(genx,geny,obj_room)) and (!place_meeting(genx,geny,obj_room)) 
 		if !position_meeting(genx,geny,obj_room_mark)
 		{
-        rooms_generated++;
-        with instance_create_depth(genx,geny,1,obj_room){if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}} 
-
+			
 		if !position_meeting(genx-300,geny-17,obj_door)
-		{
-		with instance_create_depth(genx-300,geny-17,-1,obj_door){dir="left";}} 
+		{with instance_create_depth(genx-300,geny-17,-1,obj_door){dir="left";doors2=id.object_index;}}
+        rooms_generated++;
+        with instance_create_depth(genx,geny,1,obj_room)
+		{if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}		
+		doors[1]=other.doors1;
+		doors[2]=other.doors2;} 
 		}
 		
 		instance_create_depth(genx,geny,1,obj_room_mark)
 		tt=1;
+		doors1=0;
+		doors2=0;
 		}
 		
 		//Left / Izq
@@ -104,22 +119,27 @@ gen = false;
 		down  = false;
 		
 	    if !position_meeting(genx-300,geny-17,obj_door)
-		{with instance_create_depth(genx-300,geny-17,-1,obj_door){dir="left";}} 
+		{with instance_create_depth(genx-300,geny-17,-1,obj_door){dir="left"; doors1=id.object_index;}} 
 		genx-= 608;
 		
 		if (!position_meeting(genx,geny,obj_room)) and (!place_meeting(genx,geny,obj_room)) 
-		if !position_meeting(genx,geny,obj_room_mark)
+		if!position_meeting(genx,geny,obj_room_mark)
 		{
-		rooms_generated++;
-        with instance_create_depth(genx,geny,1,obj_room){if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}} 
-
+			
 		if !position_meeting(genx+268,geny-17,obj_door)
-		{
-		with instance_create_depth(genx+268,geny-17,-1,obj_door){dir="right";}} 
-		}
+		{with instance_create_depth(genx+268,geny-17,-1,obj_door){dir="right";doors2=id.object_index;}}
+		rooms_generated++;
+        with instance_create_depth(genx,geny,1,obj_room)
+		{if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}
+		doors[1]=other.doors1;
+		doors[2]=other.doors2;} 
 		
+		}
+
 		instance_create_depth(genx,geny,1,obj_room_mark);
 		tt=1;
+		doors1=0;
+        doors2=0;
 		}
 		
 

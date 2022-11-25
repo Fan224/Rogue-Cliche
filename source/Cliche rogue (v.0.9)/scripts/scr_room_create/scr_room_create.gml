@@ -8,6 +8,13 @@ var room_assigned = room_num;
 var room_x = x-305;
 var room_y = y-240;
 
+ door_count=0;
+ door1=0;
+ door2=0;
+
+door1=doors[1];
+door2=doors[2];
+
 
 NestedArray1 = global.saved_rooms[room_assigned,1];
 NestedArray2 = global.saved_rooms[room_assigned,2];
@@ -22,8 +29,14 @@ var _y1     = NestedArray1[i,2];
 var _layer1 = NestedArray1[i,3];
 var _id1    = NestedArray1[i,4];
 
+
 //Recrea las instancias del cuarto original
-instance_create_layer(_x1+room_x,_y1+room_y,_layer1,_id1);
+with instance_create_layer(_x1+room_x,_y1+room_y,_layer1,_id1)
+{if _id1=(obj_enemy_parent)
+{
+ door1.room_enemies[door_count] = _id1; 
+ door2.room_enemies[door_count] = _id1; 
+door_count++;}}
 }
 
 for (var a = 0; a < array_length(NestedArray2); a++;)
@@ -35,7 +48,12 @@ var _layer2 = NestedArray2[a,3];
 var _id2    = NestedArray2[a,4];
 
 //Recrea las instancias del cuarto original
-instance_create_layer(_x2+room_x,_y2+room_y,_layer2,_id2);
+with instance_create_layer(_x2+room_x,_y2+room_y,_layer2,_id2)
+{if _id2=(obj_enemy_parent)
+{
+ door1.room_enemies[door_count] = _id2; 
+ door2.room_enemies[door_count] = _id2; 
+door_count++;}}
 }
 
 
@@ -48,11 +66,17 @@ var _layer3 = NestedArray3[e,3];
 var _id3    = NestedArray3[e,4];
 
 //Recrea las instancias del cuarto original
-instance_create_layer(_x3+room_x,_y3+room_y,_layer3,_id3);
+with instance_create_layer(_x3+room_x,_y3+room_y,_layer3,_id3)
+{if _id3=(obj_enemy_parent)
+{
+ door1.room_enemies[door_count] = _id3; 
+ door2.room_enemies[door_count] = _id3; 
+ door_count++;}}
 }
 
 
 
 
+//Le otorga a las puertas de entrada y vuelta una de los enemigos que estan asignados a ellas 
 
 }
