@@ -11,7 +11,7 @@ window_set_fullscreen(1);
 //Set's aspect radio
 aspect_ratio = display_get_width()/display_get_height();
 
-view_height = 250;
+view_height = 650; //250
 view_width  = round(view_height*aspect_ratio);
  
 if(view_width & 1) view_width++;

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_door",
   "spriteId": {
-    "name": "spr_wall1",
-    "path": "sprites/spr_wall1/spr_wall1.yy",
+    "name": "Sprite26",
+    "path": "sprites/Sprite26/Sprite26.yy",
   },
   "solid": false,
   "visible": true,
@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Sistemas principales",
-    "path": "folders/Objects/Sistemas/Sistemas principales.yy",
+    "name": "Walls & Decoration",
+    "path": "folders/Objects/Walls & Decoration.yy",
   },
 }

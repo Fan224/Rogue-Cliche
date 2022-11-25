@@ -25,8 +25,8 @@ if ter_t > 7 {ter=0; ter_t=0;}
 
 //Enfoca la camara en la mitad de la 'view', centrando al jugador y sin salir del "cuarto" actual.
 //ademas se inclina ligeramente en la posicion del mouse
-var _x = clamp(obj_player.x + ter_x - (view_width /2)-(obj_player.x - mouse_x)/4, x, x+607 - view_width  + ter_x);
-var _y = clamp(obj_player.y + ter_y - (view_height/2)-(obj_player.y - mouse_y)/4, y, y+480 - view_height + ter_y);
+var _x = clamp(obj_player.x + ter_x - (view_width /2)-(obj_player.x - mouse_x)/4, x-1000, x+608*5 - view_width  + ter_x);
+var _y = clamp(obj_player.y + ter_y - (view_height/2)-(obj_player.y - mouse_y)/4, y-1000, y+480*5 - view_height + ter_y);
 	
 var _cur_x = camera_get_view_x(view);
 var _cur_y = camera_get_view_y(view);
