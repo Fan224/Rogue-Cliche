@@ -1,15 +1,15 @@
 /// @description  
 
-if distance_to_object(obj_player) < 750
-{
+
 	
 //Si esta Cerrada...
 //If there are no enemies...
-var cleared = true;
+cleared = true;
 for (var i = 0; i < array_length(room_enemies); i++) {
-    if (instance_exists((room_enemies[i])) ) {
+    with room_enemies[i]{instance_destroy();}
+	
+	if (instance_exists(room_enemies[i])) {
         cleared = false;
-        break;
     }
 }
  
@@ -22,16 +22,16 @@ t+=1;
 
 //Si esta abierta...
 if act=0
-if t > 10
+if t > 70
 {
 //instance_create(x,y,obj_door_effect);
-visible=0;
-act = 1;
+sprite_index=(spr_wall1);
 solid=0;
 t=0;
+act = 1;
 }
 
-}
+
 
 //Si esta "act"-ivado puedes usar la puerta para ir a la siguiente mazmorra
 if act = 1
@@ -44,7 +44,4 @@ if dir = "left"  {obj_camera.x -= 608; with (obj_player){x-=110;}}
 if dir = "right" {obj_camera.x += 608; with (obj_player){x+=110;}}
 	
 }
-
-
-
 

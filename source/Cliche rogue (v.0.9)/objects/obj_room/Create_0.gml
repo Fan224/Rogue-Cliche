@@ -1,6 +1,6 @@
 /// @description  
 color=0;
-doors[2]=noone;
+doors[3]=noone;
 scr_room_create();
 
 

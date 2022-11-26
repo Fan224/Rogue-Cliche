@@ -8,10 +8,7 @@ var room_assigned = room_num;
 var room_x = x-305;
 var room_y = y-240;
 
- door_count=0;
- door1=0;
- door2=0;
-
+door_count=0;
 door1=doors[1];
 door2=doors[2];
 
@@ -34,9 +31,12 @@ var _id1    = NestedArray1[i,4];
 with instance_create_layer(_x1+room_x,_y1+room_y,_layer1,_id1)
 {if _id1=(obj_enemy_parent)
 {
- door1.room_enemies[door_count] = _id1; 
- door2.room_enemies[door_count] = _id1; 
-door_count++;}}
+	other.image_blend=c_red
+image_blend=c_red
+		instance_destroy(self);
+ other.door1.room_enemies[door_count] =  id; 
+ other.door2.room_enemies[door_count] =  id; 
+other.door_count++;}}
 }
 
 for (var a = 0; a < array_length(NestedArray2); a++;)
@@ -51,9 +51,10 @@ var _id2    = NestedArray2[a,4];
 with instance_create_layer(_x2+room_x,_y2+room_y,_layer2,_id2)
 {if _id2=(obj_enemy_parent)
 {
- door1.room_enemies[door_count] = _id2; 
- door2.room_enemies[door_count] = _id2; 
-door_count++;}}
+		instance_destroy();
+ other.door1.room_enemies[door_count] =  id; 
+ other.door2.room_enemies[door_count] =  id; 
+other.door_count++;}}
 }
 
 
@@ -69,9 +70,10 @@ var _id3    = NestedArray3[e,4];
 with instance_create_layer(_x3+room_x,_y3+room_y,_layer3,_id3)
 {if _id3=(obj_enemy_parent)
 {
- door1.room_enemies[door_count] = _id3; 
- door2.room_enemies[door_count] = _id3; 
- door_count++;}}
+	instance_destroy();
+ other.door1.room_enemies[door_count] =  id; 
+ other.door2.room_enemies[door_count] =  id; 
+other.door_count++;}}
 }
 
 
