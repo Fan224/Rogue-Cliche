@@ -4,12 +4,12 @@
 	
 //Si esta Cerrada...
 //If there are no enemies...
-cleared = true;
+cleared = false;
 for (var i = 0; i < array_length(room_enemies); i++) {
     with room_enemies[i]{instance_destroy();}
 	
 	if (instance_exists(room_enemies[i])) {
-        cleared = false;
+        cleared = true;
     }
 }
  
