@@ -42,8 +42,8 @@ var doors2=0;
 		 rooms_generated++;
          with instance_create_depth(genx,geny,1,obj_room)
 		 {if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}
-		 doors[1]=other.doors1;
-		 doors[2]=other.doors2;} 
+		;
+		 } 
 		}
 		
 		instance_create_depth(genx,geny,1,obj_room_mark);
@@ -75,8 +75,8 @@ var doors2=0;
 		rooms_generated++;
 	    with instance_create_depth(genx,geny,1,obj_room)
 		{if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}
-		doors[1]=other.doors1;
-		doors[2]=other.doors2;}  
+		
+		;}  
 		}
 		
 		instance_create_depth(genx,geny,1,obj_room_mark);
@@ -107,8 +107,8 @@ var doors2=0;
         rooms_generated++;
         with instance_create_depth(genx,geny,1,obj_room)
 		{if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}		
-		doors[1]=other.doors1;
-		doors[2]=other.doors2;} 
+		
+		} 
 		}
 		
 		instance_create_depth(genx,geny,1,obj_room_mark)
@@ -140,8 +140,8 @@ var doors2=0;
 		rooms_generated++;
         with instance_create_depth(genx,geny,1,obj_room)
 		{if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}
-		doors[1]=other.doors1;
-		doors[2]=other.doors2;} 
+		
+	} 
 		
 		}
 
