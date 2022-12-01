@@ -2,7 +2,6 @@
 dir = point_direction(x,y,mouse_x,mouse_y);
 
 // Movimiento & teclas
-(instance_create_layer(x,y,depth-1,obj_particle))
 
 //Direcciòn del cursor
 if global.hp > 0 
