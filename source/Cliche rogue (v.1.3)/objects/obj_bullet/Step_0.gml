@@ -19,6 +19,28 @@ instance_destroy();//destruye la bala
 }
 
 
+if shoot_type = "shotgun"
+{
+	
+speed = clamp(speed,0,50);	
+  if speed >= 1 
+  {
+  spd_decay +=1;
+  if spd_decay >= 3 {speed-=1; spd_decay=0;}  
+  }
+  else
+  {if check=true{alarm[0]=2.5; check=false;} }
+}
+
+ if shoot_type = "antigravity"
+{
+  if not speed <= -5
+  {
+  spd_decay +=1;
+  if spd_decay >= 3 {speed-=1; spd_decay=0;}  
+  }
+}
+
 
 //Piercing Bullets
 if shoot_type = 3
@@ -27,8 +49,6 @@ if place_meeting(x,y,obj_enemy_parent)
 {
 
 //Colisiòn penetrante / Busca si esta colisionando con un enemigo, y checkea si ya lo toco.
-
-
 for (var i = 0; i < array_length(enemy); i++) {
 if place_meeting(x,y, (enemy[i])) {
 
