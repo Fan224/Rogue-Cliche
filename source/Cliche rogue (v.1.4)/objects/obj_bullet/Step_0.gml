@@ -25,11 +25,13 @@ if shoot_type = "shotgun"
 speed = clamp(speed,0,50);	
   if speed >= 2
   {
+	//if check=true {alarm[0]=3; check=false;}  
+	  
   spd_decay +=1;
-  if spd_decay >= 4 {speed-=1; spd_decay=0;}  
+  if spd_decay >= 2 {speed-=1; spd_decay=0;}  
   }
   else
-  {if check=true{alarm[0]=3; check=false;} }
+  {if check=true {alarm[0]=3; check=false;} }
 }
 
  if shoot_type = "antigravity"

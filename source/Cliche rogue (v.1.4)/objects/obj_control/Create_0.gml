@@ -32,7 +32,7 @@ global.gun[1,4] = 35;
 
 //Shotgun
 global.gun[2,1] = spr_shotgun;
-global.gun[2,2] = 40;
+global.gun[2,2] = 37;
 global.gun[2,3] = "semi-auto";
 global.gun[2,4] = 20;
 

@@ -37,7 +37,7 @@ if global.gun_select = 2
   {
   sprite_index=(spr_bullet2);
   angle = other.dir +random_range(-20,20);
-  speed = random_range(6,8);
+  speed = random_range(10,13);
   shoot_type="shotgun"
   } 
   }
@@ -47,7 +47,7 @@ if global.gun_select = 2
   {
   sprite_index=(spr_bullet2);
   angle = other.dir +random_range(-5,5);
-  speed = random_range(6,8);
+  speed = random_range(10,13);
   shoot_type="shotgun"
   } 
  }
