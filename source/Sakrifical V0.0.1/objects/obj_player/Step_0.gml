@@ -132,7 +132,7 @@ if hit=1 {hitT+=1;
  if face==2 {sprite_index=(spr_player_hurt_right);}	
 }
 
-if hitT> 5 {hitT=0; hit=0;}
+if hitT> 10 {hitT=0; hit=0;}
 
 
 #endregion

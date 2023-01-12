@@ -1,6 +1,6 @@
 /// @description  
 
-global.xp+=10;
+global.hp+=3;
 instance_destroy();
 
 

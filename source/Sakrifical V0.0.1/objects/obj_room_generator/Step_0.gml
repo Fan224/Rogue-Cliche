@@ -42,7 +42,6 @@ gen = false;
          with instance_create_layer(genx,geny,layer,obj_room)
 		 {if (other.rooms_generated <= other.limit-1){color=0;}else{color=1;}
 		 }
-		
 		}
 		
 		instance_create_depth(genx,geny,1,obj_room_mark);

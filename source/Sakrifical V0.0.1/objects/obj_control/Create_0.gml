@@ -21,7 +21,7 @@ global.subs_damage  = 0; //-
 global.reload  = 8;
 global.ter_int = 7; //Terremoto Intensidad
 global.gun[0,0] = 0;
-global.guns_storage[0] = 0;
+global.guns_storage[0] = 0;//Vacìo
 global.guns_storage[1] = 1;
 global.guns_storage[2] = 0;
 

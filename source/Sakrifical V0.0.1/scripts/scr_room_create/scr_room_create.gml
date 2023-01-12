@@ -1,8 +1,8 @@
 
 function scr_room_create(){
 
-
-var room_num = 1; //Te dice a que cuarto correspondè la copiada
+var zone = 1;
+var room_num = 2 //Te dice a que cuarto correspondè la copiada
 
 var room_assigned = room_num;
 
@@ -11,7 +11,7 @@ var room_x = x-305;
 var room_y = y-240;
 
 
-Savedrooms = global.saved_zones[1];
+Savedrooms = global.saved_zones[zone];
 
 NestedArray1 = Savedrooms[room_assigned,1];
 NestedArray2 = Savedrooms[room_assigned,2];

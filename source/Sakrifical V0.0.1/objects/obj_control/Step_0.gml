@@ -12,9 +12,6 @@ global.ter_int=global.gun[global.gun_select,5];
 //LEVEL UP
 if global.xp >= global.max_xp
 {
-global.xp=0;
-global.max_xp+=35;
-global.level+=1;
 levelup=true;
 }
 
