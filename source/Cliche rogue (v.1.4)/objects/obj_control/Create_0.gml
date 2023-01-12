@@ -20,19 +20,19 @@ global.gun[0,0] = 0;
 
 //Pistol
 global.gun[0,1] = spr_gun;    //Gun sprite
-global.gun[0,2] = 10;          //Reload Time
+global.gun[0,2] = 0.3;          //Reload Time
 global.gun[0,3] = "semi-auto";//Shooting type
 global.gun[0,4] = 20;         //Bullets spawn distance
 
 //Uzi
 global.gun[1,1] = spr_uzi;
-global.gun[1,2] = 6.5;
+global.gun[1,2] = 0.1;
 global.gun[1,3] = "full-auto";
 global.gun[1,4] = 35;
 
 //Shotgun
 global.gun[2,1] = spr_shotgun;
-global.gun[2,2] = 37;
+global.gun[2,2] = 3;
 global.gun[2,3] = "semi-auto";
 global.gun[2,4] = 20;
 

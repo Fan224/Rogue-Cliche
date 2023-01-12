@@ -51,7 +51,7 @@ if global.gun_select = 2
   shoot_type="shotgun"
   } 
  }
- instance_create_layer(_xx, _yy, layer, obj_shooteffect); //Shoot particle
+  instance_create_layer(_xx, _yy, layer, obj_shooteffect); //Shoot particle
 }
 
 //Bouncer

@@ -85,9 +85,11 @@ else
 
 #region (Recarga)
 
+//Indica el tiempo de recarga y lo ulpilica por los Fps del juego, 
+//es decir que g.reload es segundos de recarga
+global.reload = global.gun[global.gun_select,2] * game_get_speed(gamespeed_fps);
 //Hace que el tiempo de recarga no pueda bajar de una cierta cantidad, por balancè.
-global.reload = global.gun[global.gun_select,2]*game_get_speed(gamespeed_fps);
-global.reload = clamp(global.reload, 2.0 , 50);
+global.reload = clamp(global.reload, 0.01 , 50);
 
 //Si disparaste se recarga el arma actual
 if shoot = 1
